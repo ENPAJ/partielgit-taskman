@@ -6,7 +6,7 @@ export default defineConfig([
     ignores: ['node_modules/', 'dist/'], 
   },
   {
-    files: ['*/.js'],     
+    files: ['*/.js'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
