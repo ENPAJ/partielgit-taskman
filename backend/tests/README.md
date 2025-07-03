@@ -1,12 +1,18 @@
-# Pour lancer le test :
+# README - Lancement des tests
 
-# depuis le repertoire backend lancer commande 
+## Démarrer le serveur backend
 
-npm run dev 
+Depuis le répertoire **backend**, lance la commande :
 
-# depuis le repertoire frontend lancer commande
+npm run dev
+
+# Démarrer le serveur frontend
+## Démarrer le serveur frontend
 
 npm start
 
-# Pour les tests (depuis /backend) : 
+# Pour lancer les tests (depuis le repertoire /backend) lancer : 
+
 npx jest tests/unit.test.js  
+
+npx jest tests/integration.test.js
