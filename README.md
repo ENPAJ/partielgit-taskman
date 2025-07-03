@@ -1,10 +1,10 @@
 # taskmanagement
+
 Un gestionnaire de tâches simple avec une interface web (frontend) et une API Node.js (backend). Ce projet utilise une architecture modulaire et un workflow Git standard pour faciliter la collaboration.
 
-📁 Structure du Projet
-bash
-Copier
-Modifier
+# 📁 Structure du Projet
+
+
 projet-gestionnaire-taches/
 ├── frontend/         # Application web (React, par exemple)
 ├── backend/          # API REST et logique serveur (Node.js / Express) 
@@ -12,13 +12,13 @@ projet-gestionnaire-taches/
           
 └── .github/          # Workflows CI/CD GitHub Actions
 
-⚙️ Installation
-🔑 Prérequis
+# ⚙️ Installation
+# 🔑 Prérequis
 
 Node.js (v14 ou +)
 npm
 
-🚀 Lancement de l'application
+# 🚀 Lancement de l'application
 1. Lancer le Backend
 bash
 Copier
@@ -35,13 +35,15 @@ cd frontend
 npm install
 npm start
 
-🔐 Identifiants de Connexion (par défaut)
+# 🔐 Identifiants de Connexion (par défaut)
+
 Username : admin@test.com
 
 Password : password
 
-🔄 Workflow de Développement
-📌 Branches Principales
+# 🔄 Workflow de Développement
+# 📌 Branches Principales
+
 main : Contient la version de production de l'application.
 
 develop : Contient les fonctionnalités en cours de développement, une fois fini on merge avec main.
