@@ -1,0 +1,11 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+    "env": {
+    "node": true,
+    "es2021": true
+  }
+}
