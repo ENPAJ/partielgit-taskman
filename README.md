@@ -49,4 +49,3 @@ develop : Contient les fonctionnalités en cours de développement, une fois fin
 feature/* : Pour les nouvelles fonctionnalités que chacun de nous va faire qu'on merge avec develop
 
 hotfix/* : Pour les corrections urgentes ( on a pas utiliser cette branche)
-
