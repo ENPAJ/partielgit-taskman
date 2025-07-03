@@ -69,3 +69,7 @@ feature/* : Pour les nouvelles fonctionnalités que chacun de nous va faire qu'o
 
 hotfix/* : Pour les corrections urgentes ( on a pas utiliser cette branche)
 
+
+##test eslint fonctionnel pour le backend dans la branche feature/eslint mais pas le temps de merge
+
+
