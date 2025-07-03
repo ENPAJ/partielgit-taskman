@@ -13,6 +13,10 @@ projet-gestionnaire-taches/
 └── .github/          # Workflows CI/CD GitHub Actions
 
 # ⚙️ Installation
+
+Node.js (v14 ou +) 
+npx
+
 # 🔑 Prérequis
 
 Node.js (v14 ou +)
