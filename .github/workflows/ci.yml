@@ -1,0 +1,68 @@
+name: CI Tests
+
+on:
+  push:
+    branches: [main, develop, features/**]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies backend
+      working-directory: ./backend
+      run: npm install
+
+    - name: Install dependencies frontend
+      working-directory: ./frontend
+      run: npm install
+
+    - name: Install Xvfb for Selenium tests
+      run: sudo apt-get update && sudo apt-get install -y xvfb
+
+    - name: Start backend
+      working-directory: ./backend
+      run: |
+        nohup npm run dev > backend.log 2>&1 &
+        echo $! > backend.pid
+
+    - name: Start frontend
+      working-directory: ./frontend
+      run: |
+        nohup npm start > frontend.log 2>&1 &
+        echo $! > frontend.pid
+
+    - name: Wait for backend and frontend to be ready
+      run: |
+        npm install -g wait-on
+        wait-on http://localhost:3000
+        wait-on http://localhost:8080
+
+    - name: Run unit tests backend
+      working-directory: ./backend
+      run: |
+        npx jest tests/unit.test.js
+        npx jest tests/integration.test.js
+
+    - name: Run Selenium tests
+      working-directory: ./backend
+      env:
+        DISPLAY: :99
+      run: |
+        Xvfb :99 -screen 0 1280x1024x24 &
+        node tests/selenium/smoke.test.js
+
+    - name: Stop backend and frontend
+      run: |
+        kill $(cat backend.pid) || true
+        kill $(cat frontend.pid) || true
