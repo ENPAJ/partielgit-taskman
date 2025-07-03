@@ -7,8 +7,9 @@ Copier
 Modifier
 projet-gestionnaire-taches/
 ├── frontend/         # Application web (React, par exemple)
-├── backend/          # API REST et logique serveur (Node.js / Express)
-├── tests/            # Tests automatisés (unitaires et d’intégration)
+├── backend/          # API REST et logique serveur (Node.js / Express) 
+    ├── tests/        # Tests automatisés (unitaires et d’intégration)   
+          
 └── .github/          # Workflows CI/CD GitHub Actions
 
 ⚙️ Installation
