@@ -5,12 +5,13 @@ Un gestionnaire de tâches simple avec une interface web (frontend) et une API N
 # 📁 Structure du Projet
 
 
+```
 projet-gestionnaire-taches/
-├── frontend/         # Application web (React, par exemple)
-├── backend/          # API REST et logique serveur (Node.js / Express) 
-    ├── tests/        # Tests automatisés (unitaires et d’intégration)   
-          
-└── .github/          # Workflows CI/CD GitHub Actions
+├── frontend/          # Application web (React, par exemple)
+├── backend/           # API REST et logique serveur (Node.js / Express)
+│   ├── tests/         # Tests automatisés (unitaires et d'intégration)
+└── .github/           # Workflows CI/CD GitHub Actions
+```
 
 # ⚙️ Installation
 
